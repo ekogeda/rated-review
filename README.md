@@ -29,4 +29,4 @@ npm run build
 ```
 
 ### Go-To App
-* [rated-review](https://rated-review.netlify.app/)
+See [rated-review](https://rated-review.netlify.app/)
