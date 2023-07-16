@@ -30,5 +30,5 @@ npm run build
 # Rated
 Rated Review
 
-## Link
+## Click the link below
 * [rated-review](https://rated-review.netlify.app/)
