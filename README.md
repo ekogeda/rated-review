@@ -27,3 +27,8 @@ yarn serve
 ```sh
 npm run build
 ```
+# Rated
+Rated Review
+
+## Link
+* [rated-review](https://rated-review.netlify.app/)
