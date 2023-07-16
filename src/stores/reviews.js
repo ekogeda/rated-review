@@ -2,6 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useReviewStore = defineStore('reviews', () => {
+  const END_POINT = 'https://ritzy-kiwi-verbena.glitch.me'
   const reviews = ref([])
   const allReviews = ref([])
   const editedData = ref({
@@ -11,7 +12,7 @@ export const useReviewStore = defineStore('reviews', () => {
 
   async function getAllReviews() {
     try {
-      const reviews = await fetch('http://localhost:5000/reviews?_sort=id&_order=desc')
+      const reviews = await fetch(`${END_POINT}/reviews?_sort=id&_order=desc`)
       const data = await reviews.json()
       allReviews.value = data
     } catch (error) {
@@ -20,7 +21,7 @@ export const useReviewStore = defineStore('reviews', () => {
   }
 
   async function addReview(params) {
-    const response = await fetch('http://localhost:5000/reviews', {
+    const response = await fetch(`${END_POINT}/reviews`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(params)
@@ -37,7 +38,7 @@ export const useReviewStore = defineStore('reviews', () => {
   }
 
   async function updateReview(params) {
-    const response = await fetch(`http://localhost:5000/reviews/${params.id}`, {
+    const response = await fetch(`${END_POINT}/reviews/${params.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(params)
@@ -52,7 +53,7 @@ export const useReviewStore = defineStore('reviews', () => {
   }
 
   async function deleteReview(params) {
-    const response = await fetch(`http://localhost:5000/reviews/${params.id}`, {
+    const response = await fetch(`${END_POINT}/reviews/${params.id}`, {
       method: 'DELETE'
     })
 
