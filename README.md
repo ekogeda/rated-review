@@ -19,7 +19,7 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-yarn serve
+npm run dev
 ```
 
 ### Compile and Minify for Production
@@ -27,8 +27,6 @@ yarn serve
 ```sh
 npm run build
 ```
-# Rated
-Rated Review
 
-## Click the link below
+### Go-To App
 * [rated-review](https://rated-review.netlify.app/)
