@@ -1,6 +1,6 @@
-# vue-pinia
+# review-rating-app
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a review rating app built using Vue3, Vuetify3 and Pinia.
 
 ## Recommended IDE Setup
 
