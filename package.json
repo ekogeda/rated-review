@@ -7,7 +7,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "start": "json-server --watch reviews.json --port 5000",
-    "serve": "concurrently \"yarn start\" \"yarn dev\""
+    "serve": "concurrently \"npm run start\" \"npm run dev\""
   },
   "dependencies": {
     "@mdi/font": "5.9.55",

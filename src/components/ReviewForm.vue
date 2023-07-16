@@ -63,24 +63,22 @@ const postReview = () => {
 </script>
 
 <template>
-  <v-card elevation="5" class="pa-3 mb-5">
-    <v-card-title class="text-center">
+  <v-card elevation="5" class="mb-5">
+    <v-card-title class="text-wrap text-center">
       How would you rate your service with us?
     </v-card-title>
 
-    <v-card-text class="text-center">
-      <ReviewRating @ratingValue="setRating" :rated="rating" />
+    <ReviewRating @ratingValue="setRating" :rated="rating" />
 
-      <v-form @submit.prevent>
-        <v-text-field v-model="review" :loading="loading" density="compact" variant="solo" label="Write a review"
-          single-line clearable hide-details="auto">
-          <template v-slot:append-inner>
-            <v-btn type="submit" size="small" color="success" flat @click="postReview" :disabled="loading">Send</v-btn>
-          </template>
-        </v-text-field>
-        <small class="text-error">{{ error }}</small>
-      </v-form>
-    </v-card-text>
+    <v-form @submit.prevent class="ma-2">
+      <v-text-field v-model="review" :loading="loading" density="compact" variant="solo" label="Write a review"
+        single-line clearable hide-details="auto">
+        <template v-slot:append-inner>
+          <v-btn type="submit" size="small" color="success" flat @click="postReview" :disabled="loading">Send</v-btn>
+        </template>
+      </v-text-field>
+      <small class="text-error">{{ error }}</small>
+    </v-form>
   </v-card>
 </template>
 
